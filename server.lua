@@ -29,12 +29,11 @@ function TaxVehicles()
         local taxToPay = vehicleCount * taxAmount
         if taxToPay > 0 then
             xPlayer.removeAccountMoney('bank', taxToPay)
-            TriggerClientEvent('okokNotify:Alert', xPlayer.source, 'KFZ-Steuer', 'Du hast ~r~' .. taxToPay .. '~s~ $ KFZ-Steuer bezahlt.', 5000, 'info')
+            TriggerClientEvent('esx:showNotification', xPlayer.source, 'Du hast ~r~' .. taxToPay .. '~s~ $ KFZ-Steuer bezahlt.')
         end
     end
 end
 
--- Steuerintervall
 Citizen.CreateThread(function()
     while true do
         Citizen.Wait(Config.TaxInterval)
