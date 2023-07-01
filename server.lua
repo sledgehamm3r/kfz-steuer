@@ -10,12 +10,12 @@
 --#     Website: https://shamev.de                      #
 --# # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
--- Server-Side Script
+
 ESX = exports["es_extended"]:getSharedObject()
 
 -- Konfiguration
 local taxAmount = 150 -- Steuerbetrag pro Fahrzeug
-local taxInterval = 1800000 -- Steuer0intervall in Millisekunden (30 Minuten)1800000
+local taxInterval = 1800000 -- Steuerintervall in Millisekunden (30 Minuten)1800000
 
 -- Steuerfunktion
 function TaxVehicles()
@@ -31,7 +31,7 @@ function TaxVehicles()
     end
 end
 
--- Steuerintervall
+
 Citizen.CreateThread(function()
     while true do
         Citizen.Wait(taxInterval)
