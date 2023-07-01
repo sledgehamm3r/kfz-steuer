@@ -11,10 +11,9 @@
 --#     Website: https://shamev.de                      #
 --# # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
--- Steuerbetrag pro Fahrzeug (in GTA$)
 Config = {}
 
--- Steuerbeträge für verschiedene Anzahlen von Fahrzeugen (in GTA$)
+-- Steuerbeträge für verschiedene Anzahlen von Fahrzeugen
 Config.TaxAmounts = {
     [0] = 0,
     [1] = 50,
