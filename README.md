@@ -113,7 +113,7 @@ Es ist keinerlei Bedienung erforderlich - der Script berechnet ab Serverstart di
 ## Roadmap
 
 - [x] Füge Readme.md hinzu
-- [ ] Füge Config.lua hinzu
+- [x] Füge Config.lua hinzu
 - [ ] Füge Multi-language Support hinzu
     - [ ] English
 
