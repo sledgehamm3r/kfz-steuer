@@ -13,7 +13,6 @@
 
 ESX = exports["es_extended"]:getSharedObject()
 
-
 -- Lade Konfiguration
 local Config = {}
 Config = LoadResourceFile(GetCurrentResourceName(), 'config.lua')
@@ -25,7 +24,9 @@ function TaxVehicles()
     for i=1, #xPlayers, 1 do
         local xPlayer = ESX.GetPlayerFromId(xPlayers[i])
         local ownedVehicles = MySQL.Sync.fetchAll('SELECT * FROM owned_vehicles WHERE owner = @owner', {['@owner'] = xPlayer.identifier})
-        local taxToPay = #ownedVehicles * Config.TaxAmount
+        local vehicleCount = #ownedVehicles
+        local taxAmount = Config.TaxAmounts[vehicleCount] or Config.TaxAmounts[#Config.TaxAmounts]
+        local taxToPay = vehicleCount * taxAmount
         if taxToPay > 0 then
             xPlayer.removeAccountMoney('bank', taxToPay)
             TriggerClientEvent('okokNotify:Alert', xPlayer.source, 'KFZ-Steuer', 'Du hast ~r~' .. taxToPay .. '~s~ $ KFZ-Steuer bezahlt.', 5000, 'info')

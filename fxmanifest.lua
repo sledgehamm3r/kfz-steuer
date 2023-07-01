@@ -13,8 +13,8 @@
 fx_version 'cerulean'
 game 'gta5'
 
-author 'Dein Name'
-description 'KFZ-Steuer-Script für FiveM (ESX)'
+author 'ShameV'
+description 'ShameV KFZ-Steuer'
 version '1.0.0'
 
 server_scripts {
