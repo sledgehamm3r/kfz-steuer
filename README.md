@@ -12,7 +12,7 @@
   <h3 align="center">KFZ Steuer</h3>
 
   <p align="center">
-    Ein MikroScript zum eintreiben von KFZ Steuer
+    Ein MikroScript zum Eintreiben von KFZ Steuer
     <br />
     <a href="https://github.com/sledgehamm3r/kfz-steuer"><strong>Dokumentation ansehen »</strong></a>
     <br />
